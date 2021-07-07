@@ -4,7 +4,7 @@ class Button extends StatelessWidget {
   final String buttonLabel;
   final Color primaryColor;
   final Color onPrimaryColor;
-  final Function onClick;
+  final void Function() onClick;
 
   Button(
       {@required this.buttonLabel,
