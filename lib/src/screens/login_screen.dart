@@ -58,11 +58,11 @@ class LoginScreen extends StatelessWidget {
         ),
         RichText(
           text: TextSpan(
-            text: 'Remember me',
+            text: 'Remember me ',
             style: DefaultTextStyle.of(context).style,
             children: const <TextSpan>[
               TextSpan(
-                text: 'Forgot password?',
+                text: ' Forgot password?',
                 style: TextStyle(
                   color: Colors.greenAccent,
                 ),
