@@ -14,7 +14,7 @@ class EmailVerificationScreen extends StatelessWidget {
             Image(image: AssetImage('assets/images/main_image.png')),
             Logo(),
             text(),
-            verifyEmail(),
+            verifyEmail(context),
             questionsEmail(context),
           ],
         ),
@@ -22,9 +22,11 @@ class EmailVerificationScreen extends StatelessWidget {
     );
   }
 
-  Widget verifyEmail() {
+  Widget verifyEmail(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pop(context);
+      },
       child: Text('VERIFY EMAIL'),
       style: ElevatedButton.styleFrom(
         primary: Colors.greenAccent,

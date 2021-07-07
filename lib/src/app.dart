@@ -7,15 +7,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          // body: LoginScreen(),
-          ),
+        body: LoginScreen(),
+      ),
 
       /// defines which route the app should start with
       initialRoute: '/',
 
       /// define the available named routes and the widgets to build when navigating to those routes
       routes: {
-        '/': (context) => LoginScreen(),
         '/emailVerificationScreen': (context) => EmailVerificationScreen(),
       },
     );
