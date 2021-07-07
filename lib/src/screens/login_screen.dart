@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
           emailField(),
           passwordField(),
           rememberMeCheckbox(),
-          login(),
+          login(context),
           signUp(context),
         ],
       ),
@@ -37,9 +37,11 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget login() {
+  Widget login(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, '/login');
+      },
       child: Text('Login'),
       style: ElevatedButton.styleFrom(
         primary: Colors.greenAccent,

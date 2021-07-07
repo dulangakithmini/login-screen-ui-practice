@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/src/screens/email_verification_screen.dart';
 import 'package:login_screen/src/screens/login_screen.dart';
 
 class App extends StatelessWidget {
@@ -8,6 +9,15 @@ class App extends StatelessWidget {
       home: Scaffold(
         body: LoginScreen(),
       ),
+      onGenerateRoute: routes,
+    );
+  }
+
+  Route routes(RouteSettings settings) {
+    return MaterialPageRoute(
+      builder: (context) {
+        return EmailVerificationScreen();
+      },
     );
   }
 }
