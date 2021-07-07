@@ -14,16 +14,16 @@ class EmailVerificationScreen extends StatelessWidget {
           children: [
             Image(image: AssetImage('assets/images/main_image.png')),
             Logo(),
-            text(),
-            verifyEmail(context),
-            questionsEmail(context),
+            _buildText(),
+            _buildVerifyEmailButton(context),
+            _buildQuestionsEmail(context),
           ],
         ),
       ),
     );
   }
 
-  Widget verifyEmail(BuildContext context) {
+  Widget _buildVerifyEmailButton(BuildContext context) {
     return Button(
       buttonLabel: 'VERIFY EMAIL',
       primaryColor: Colors.greenAccent,
@@ -34,7 +34,7 @@ class EmailVerificationScreen extends StatelessWidget {
     );
   }
 
-  Widget questionsEmail(BuildContext context) {
+  Widget _buildQuestionsEmail(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -62,7 +62,7 @@ class EmailVerificationScreen extends StatelessWidget {
     );
   }
 
-  Widget text() {
+  Widget _buildText() {
     return Text(
       'Hi! Please use the link below to verify your email and start using FACIO.',
       textAlign: TextAlign.justify,

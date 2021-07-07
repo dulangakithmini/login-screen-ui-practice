@@ -12,18 +12,18 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Logo(),
-            emailField(),
-            passwordField(),
-            rememberMeCheckbox(context),
-            login(context),
-            signUp(context),
+            _buildEmailField(),
+            _buildPasswordField(),
+            _buildRememberMeCheckbox(context),
+            _buildLoginButton(context),
+            _buildSignUp(context),
           ],
         ),
       ),
     );
   }
 
-  Widget emailField() {
+  Widget _buildEmailField() {
     return TextField(
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.mail_outline),
@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget passwordField() {
+  Widget _buildPasswordField() {
     return TextField(
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.lock),
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget login(BuildContext context) {
+  Widget _buildLoginButton(BuildContext context) {
     return Button(
       buttonLabel: 'Login',
       primaryColor: Colors.greenAccent,
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget rememberMeCheckbox(BuildContext context) {
+  Widget _buildRememberMeCheckbox(BuildContext context) {
     return Row(
       children: [
         Checkbox(
@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  signUp(BuildContext context) {
+  Widget _buildSignUp(BuildContext context) {
     return RichText(
       text: TextSpan(
         text: 'Don\'t have an account?',
