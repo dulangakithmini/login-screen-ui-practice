@@ -4,18 +4,20 @@ import 'package:login_screen/src/widgets/logo.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(20.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Logo(),
-          emailField(),
-          passwordField(),
-          rememberMeCheckbox(context),
-          login(context),
-          signUp(context),
-        ],
+    return Scaffold(
+      body: Container(
+        margin: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Logo(),
+            emailField(),
+            passwordField(),
+            rememberMeCheckbox(context),
+            login(context),
+            signUp(context),
+          ],
+        ),
       ),
     );
   }
@@ -56,10 +58,10 @@ class LoginScreen extends StatelessWidget {
         Checkbox(
           value: false,
         ),
+        Text('Remember me'),
+        Spacer(),
         RichText(
           text: TextSpan(
-            text: 'Remember me ',
-            style: DefaultTextStyle.of(context).style,
             children: const <TextSpan>[
               TextSpan(
                 text: ' Forgot password?',
@@ -69,7 +71,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
       ],
     );
   }
@@ -78,7 +80,9 @@ class LoginScreen extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: 'Don\'t have an account?',
-        style: DefaultTextStyle.of(context).style,
+        style: TextStyle(
+          color: Colors.black,
+        ),
         children: const <TextSpan>[
           TextSpan(
             text: ' Signup here',
