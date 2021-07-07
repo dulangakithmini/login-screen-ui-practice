@@ -7,7 +7,10 @@ class Button extends StatelessWidget {
   final Function onClick;
 
   Button(
-      {this.buttonLabel, this.primaryColor, this.onPrimaryColor, this.onClick});
+      {@required this.buttonLabel,
+      this.primaryColor,
+      this.onPrimaryColor,
+      this.onClick});
 
   @override
   Widget build(BuildContext context) {
