@@ -71,24 +71,19 @@ class LoginScreen extends StatelessWidget {
   }
 
   signUp(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        RichText(
-          text: TextSpan(
-            text: 'Don\'t have an account?',
-            style: DefaultTextStyle.of(context).style,
-            children: const <TextSpan>[
-              TextSpan(
-                text: ' Signup here',
-                style: TextStyle(
-                  color: Colors.greenAccent,
-                ),
-              ),
-            ],
+    return RichText(
+      text: TextSpan(
+        text: 'Don\'t have an account?',
+        style: DefaultTextStyle.of(context).style,
+        children: const <TextSpan>[
+          TextSpan(
+            text: ' Signup here',
+            style: TextStyle(
+              color: Colors.greenAccent,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
