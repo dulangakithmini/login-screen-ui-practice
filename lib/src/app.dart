@@ -9,7 +9,7 @@ class App extends StatelessWidget {
       home: Scaffold(
         body: LoginScreen(),
       ),
-      onGenerateRoute: routes,
+      initialRoute: '/',
     );
   }
 
