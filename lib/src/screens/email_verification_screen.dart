@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/src/widgets/button.dart';
 import 'package:login_screen/src/widgets/logo.dart';
 
 class EmailVerificationScreen extends StatelessWidget {
@@ -23,15 +24,13 @@ class EmailVerificationScreen extends StatelessWidget {
   }
 
   Widget verifyEmail(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
+    return Button(
+      buttonLabel: 'VERIFY EMAIL',
+      primaryColor: Colors.greenAccent,
+      onPrimaryColor: Colors.black,
+      onClick: () {
         Navigator.pop(context);
       },
-      child: Text('VERIFY EMAIL'),
-      style: ElevatedButton.styleFrom(
-        primary: Colors.greenAccent,
-        onPrimary: Colors.black,
-      ),
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/src/widgets/button.dart';
 import 'package:login_screen/src/widgets/logo.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -40,15 +41,13 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget login(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
+    return Button(
+      buttonLabel: 'Login',
+      primaryColor: Colors.greenAccent,
+      onPrimaryColor: Colors.black,
+      onClick: () {
         Navigator.pushNamed(context, '/emailVerificationScreen');
       },
-      child: Text('Login'),
-      style: ElevatedButton.styleFrom(
-        primary: Colors.greenAccent,
-        onPrimary: Colors.black,
-      ),
     );
   }
 
