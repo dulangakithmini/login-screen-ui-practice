@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
           Logo(),
           emailField(),
           passwordField(),
-          rememberMeCheckbox(),
+          rememberMeCheckbox(context),
           login(context),
           signUp(context),
         ],
@@ -50,20 +50,24 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget rememberMeCheckbox() {
+  Widget rememberMeCheckbox(BuildContext context) {
     return Row(
       children: [
         Checkbox(
           value: false,
         ),
-        Text('Remember me'),
-        Spacer(),
         RichText(
           text: TextSpan(
-            text: 'Forgot password?',
-            style: TextStyle(
-              color: Colors.greenAccent,
-            ),
+            text: 'Remember me',
+            style: DefaultTextStyle.of(context).style,
+            children: const <TextSpan>[
+              TextSpan(
+                text: 'Forgot password?',
+                style: TextStyle(
+                  color: Colors.greenAccent,
+                ),
+              ),
+            ],
           ),
         )
       ],
