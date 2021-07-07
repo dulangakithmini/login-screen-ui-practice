@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
   Widget login(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/login');
+        Navigator.pushNamed(context, '/emailVerificationScreen');
       },
       child: Text('Login'),
       style: ElevatedButton.styleFrom(
