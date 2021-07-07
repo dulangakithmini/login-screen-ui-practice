@@ -39,18 +39,20 @@ class EmailVerificationScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        RichText(
-          text: TextSpan(
-            text: 'Questions? Email us at',
-            style: DefaultTextStyle.of(context).style,
-            children: const <TextSpan>[
-              TextSpan(
-                text: ' contact@facio.com',
-                style: TextStyle(
-                  color: Colors.greenAccent,
+        Expanded(
+          child: RichText(
+            text: TextSpan(
+              text: 'Questions? Email us at',
+              style: DefaultTextStyle.of(context).style,
+              children: const <TextSpan>[
+                TextSpan(
+                  text: ' contact@facio.com',
+                  style: TextStyle(
+                    color: Colors.greenAccent,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
